@@ -32,9 +32,9 @@ def guess(gstr: str):
             print(f'Отгадал! Это действительно было: {gstr} +5 очков!')
             break
         for i, ch in enumerate(gstr):
-            if ch == char:
+            if char == ch:
                 field[i] = ch
-                if char not in sh_w:
+                if char not in sh_w and char not in field:
                     score += 1
         if char not in gstr:
             wrong.add(char)
