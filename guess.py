@@ -44,7 +44,7 @@ def clear_os():
 
 
 def main():
-    with open('words.txt', encoding='utf-8') as f:
+    with open('words.txt', mode='r' , encoding='utf-8') as f:
         str_words = f.read()
         words = [w.strip() for w in str_words.split(',')]
     system(clear_os())
