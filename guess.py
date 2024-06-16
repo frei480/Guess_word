@@ -27,8 +27,9 @@ def guess(gstr: str):
         print_table()
         char = input('Введи букву или слово целиком> ')
         if char == gstr:
-            print(f'Отгадал! Это действительно было: {gstr}')
             score += 5
+            print_table()
+            print(f'Отгадал! Это действительно было: {gstr} +5 очков!')
             break
         for i, ch in enumerate(gstr):
             if ch == char:
